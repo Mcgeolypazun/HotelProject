@@ -1,23 +1,39 @@
 package tae_in_reservation;
 
+import java.util.Scanner;
+
 import static hotelroom.RoomDataClass.hotelRoomHashMap;
 
-public class ReservationCheck {//고객이 자신의 정보 조회
+public class ReservationCheck { //고객이 자신의 정보 조회
 
     String customerName;
     String phone;
     String uuid;
 
-    public ReservationCheck(){
-        //Scanner 3번 필요
+    public ReservationCheck() {
+        System.out.println("\n예약 조회 서비스 입니다. 예약자명, 전화번호, 예약번호를 아래 순서에 맞게 입력해주세요.");
+
+        Scanner cusName = new Scanner(System.in);
+        System.out.println("\n예약자명을 입력해 주세요.");
+        customerName = cusName.next();
+
+        Scanner cusPhone = new Scanner(System.in);
+        System.out.println("전화번호를 입력해 주세요.");
+        phone = cusPhone.next();
+
+        Scanner cusUuid = new Scanner(System.in);
+        System.out.println("에약번호를 입력해 주세요.");
+        uuid = cusUuid.next();
+
+
+//        public boolean isOccupation () {
+//
+//            return false;
+//        }
+//        public String reservationDate () {
+//
+//            return "";
+//        }
     }
 
-    public boolean isOccupation(){
-
-        return false;
-    }
-    public String reservationDate(){
-
-        return "";
-    }
 }
