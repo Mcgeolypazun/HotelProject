@@ -13,7 +13,7 @@ import java.util.HashMap;
 
         */
 public class RoomDataClass {
-    public static HashMap<String , Boolean> hotelRoomHashMap = new HashMap();
+    public static HashMap<String , HotelRoom> hotelRoomHashMap = new HashMap();
     //HotelRoom 이 점유 되어 있으면 boolean을 true로 둔다.
     public RoomDataClass(){
         data();
@@ -56,23 +56,23 @@ public class RoomDataClass {
         twin2.setName("twin2");
         twin3.setName("twin3");
 
-        hotelRoomHashMap.put(single1.getName(),false);
-        hotelRoomHashMap.put(single2.getName(),false);
-        hotelRoomHashMap.put(single3.getName(),false);
-        hotelRoomHashMap.put(single4.getName(),false);
+        hotelRoomHashMap.put(single1.getName(),single1);
+        hotelRoomHashMap.put(single2.getName(),single2);
+        hotelRoomHashMap.put(single3.getName(),single3);
+        hotelRoomHashMap.put(single4.getName(),single4);
 
-        hotelRoomHashMap.put(double1.getName(),false);
-        hotelRoomHashMap.put(double2.getName(),false);
-        hotelRoomHashMap.put(double3.getName(),false);
-        hotelRoomHashMap.put(double4.getName(),false);
+        hotelRoomHashMap.put(double1.getName(),double1);
+        hotelRoomHashMap.put(double2.getName(),double2);
+        hotelRoomHashMap.put(double3.getName(),double3);
+        hotelRoomHashMap.put(double4.getName(),double4);
 
-        hotelRoomHashMap.put(suite1.getName(),false);
-        hotelRoomHashMap.put(suite2.getName(),false);
-        hotelRoomHashMap.put(suite3.getName(),false);
+        hotelRoomHashMap.put(suite1.getName(),suite1);
+        hotelRoomHashMap.put(suite2.getName(),suite2);
+        hotelRoomHashMap.put(suite3.getName(),suite3);
 
-        hotelRoomHashMap.put(twin1.getName(),false);
-        hotelRoomHashMap.put(twin2.getName(),false);
-        hotelRoomHashMap.put(twin3.getName(),false);
+        hotelRoomHashMap.put(twin1.getName(),twin1);
+        hotelRoomHashMap.put(twin2.getName(),twin2);
+        hotelRoomHashMap.put(twin3.getName(),twin3);
     }
 
 }
