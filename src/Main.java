@@ -10,6 +10,7 @@ public class Main {
     public static void main(String[] args) {
         RoomDataClass roomDataClass = new RoomDataClass();
 
+
         //점유되고 있는지 확인
         System.out.println("방 상태:"+hotelRoomHashMap.get("single1"));
 
