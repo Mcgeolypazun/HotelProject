@@ -12,12 +12,9 @@ import java.util.*;
 import static hotelroom.RoomDataClass.hotelRoomHashMap;
 
 public class Main {
-
+    static Scanner kb = new Scanner(System.in);
     public static void main(String[] args) throws InterruptedException {
 
-
-        static Scanner kb = new Scanner(System.in);
-        public static void main (String[]args){
 
             RoomDataClass roomDataClass = new RoomDataClass();
             MainView mainView = new MainView();
@@ -45,21 +42,23 @@ public class Main {
         LocalDateTime startTime4 = LocalDateTime.of(2023,10,23,13,0);
         LocalDateTime endTime4 = LocalDateTime.of(2023,10,23,16,0);
         reservationRoomDateReady = new ReservationRoomDateReady(hotelRoomHashMap.get("single1"),startTime4,endTime4);
+
+        LocalDateTime startTime5 = LocalDateTime.of(2023,10,22,13,0);
+        LocalDateTime endTime5 = LocalDateTime.of(2023,10,25,16,0);
+        reservationRoomDateReady = new ReservationRoomDateReady(hotelRoomHashMap.get("single1"),startTime5,endTime5);
         //예약됨
         boolean isAfter = startTime2.isAfter(startTime3);
         System.out.println(isAfter);
 
-            //방을 예약할때
-            hotelRoomHashMap.put("single1", true); // 이 값에 true를 입력함
-            System.out.println("방 상태:" + hotelRoomHashMap.get("single1"));
-            hotelRoomHashMap.put("single1", false);
-            Customer customer1 = new CustomerBuilder()
-                    .setMoney(100000)
-                    .setName("김철수")
-                    .setPhone("010-4444-9999")
-                    .setUuid(uuid.toString())
-                    .build();
 
-        }
+
+//            Customer customer1 = new CustomerBuilder()
+//                    .setMoney(100000)
+//                    .setName("김철수")
+//                    .setPhone("010-4444-9999")
+//                    .setUuid(uuid.toString())
+//                    .build();
+
+
     }
 }

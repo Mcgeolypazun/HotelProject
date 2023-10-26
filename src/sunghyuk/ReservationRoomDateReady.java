@@ -44,7 +44,7 @@ public class ReservationRoomDateReady {
     public boolean ABStartEnd(int i,LocalDateTime startTime, LocalDateTime endTime){
         if(arrRoomDate.get(i).getHotelRoom().equals(hotelRoom.getName()) &&
                 arrRoomDate.get(i).getStartTime().isBefore(startTime) ||
-                arrRoomDate.get(i).getEndTime().isBefore(endTime)){
+                arrRoomDate.get(i).getStartTime().isBefore(endTime)){
             return true;
         }
         else return false;
@@ -52,7 +52,7 @@ public class ReservationRoomDateReady {
 
     public boolean startEndAB(int i,LocalDateTime startTime, LocalDateTime endTime){
         if(arrRoomDate.get(i).getHotelRoom().equals(hotelRoom.getName()) &&
-                arrRoomDate.get(i).getStartTime().isAfter(startTime) ||
+                arrRoomDate.get(i).getEndTime().isAfter(startTime) ||
                 arrRoomDate.get(i).getEndTime().isAfter(endTime)){
             return true;
         }
