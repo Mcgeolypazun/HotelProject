@@ -5,16 +5,10 @@ import interfaces.HotelRoom;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/*      이런식으로 사용함
-       RoomDataClass roomDataClass = new RoomDataClass();
 
-       //점유되고 있는지 확인
-       System.out.println(hotelRoomHashMap.get("single1"));
-
-        */
 public class RoomDataClass {
     public static HashMap<String , HotelRoom> hotelRoomHashMap = new HashMap();
-    //HotelRoom 이 점유 되어 있으면 boolean을 true로 둔다.
+
     public RoomDataClass(){
         data();
     }
