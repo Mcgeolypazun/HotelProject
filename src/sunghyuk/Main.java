@@ -1,33 +1,18 @@
-import customer.Customer;
-import customer.CustomerBuilder;
-import hotelroom.RoomDataClass;
-import tae_in_reservation.MainView;
-import hotelroom.SingleRoom;
-import sunghyuk.ReservationRoomDateReady;
+package sunghyuk;
 
+import hotelroom.RoomDataClass;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.Scanner;
 
 import static hotelroom.RoomDataClass.hotelRoomHashMap;
 
 public class Main {
+
     static Scanner kb = new Scanner(System.in);
-    public static void main(String[] args) throws InterruptedException {
 
-//<<<<<<< HEAD
-
-        //점유되고 있는지 확인
-        System.out.println("방 상태:"+hotelRoomHashMap.get("single1"));
-//=======
-//>>>>>>> b6b19f2d74b51b7a9a951c0e2f4a9f6e04904622
-
+    public static void main(String[] args) {
         RoomDataClass roomDataClass = new RoomDataClass();
-        MainView mainView = new MainView();
-        mainView.mainView();
-
-
-//<<<<<<< HEAD
         //점유되고 있는지 확인
         System.out.println("방 상태:" + hotelRoomHashMap.get("single1"));
 
@@ -49,11 +34,14 @@ public class Main {
         LocalDateTime startTime4 = LocalDateTime.of(2023,10,23,13,0);
         LocalDateTime endTime4 = LocalDateTime.of(2023,10,23,16,0);
         reservationRoomDateReady = new ReservationRoomDateReady(hotelRoomHashMap.get("single1"),startTime4,endTime4);
-
+        //예약됨
         LocalDateTime startTime5 = LocalDateTime.of(2023,10,22,13,0);
         LocalDateTime endTime5 = LocalDateTime.of(2023,10,25,16,0);
         reservationRoomDateReady = new ReservationRoomDateReady(hotelRoomHashMap.get("single1"),startTime5,endTime5);
-        //예약됨
+        //예약안됨
+        LocalDateTime startTime6 = LocalDateTime.of(2023,9,22,13,0);
+        LocalDateTime endTime6 = LocalDateTime.of(2023,9,25,16,0);
+        reservationRoomDateReady = new ReservationRoomDateReady(hotelRoomHashMap.get("single1"),startTime6,endTime6);
         boolean isAfter = startTime2.isAfter(startTime3);
         System.out.println(isAfter);
 
@@ -65,9 +53,6 @@ public class Main {
 //                    .setPhone("010-4444-9999")
 //                    .setUuid(uuid.toString())
 //                    .build();
-//=======
-//>>>>>>> 683f6ea8af62b8348418ad1434130f34d060ed7e
-
 
     }
 }

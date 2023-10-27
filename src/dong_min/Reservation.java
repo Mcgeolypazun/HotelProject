@@ -3,6 +3,8 @@ package dong_min;
 import hotelroom.*;
 import interfaces.HotelRoom;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Reservation {
@@ -16,9 +18,20 @@ public class Reservation {
 
     public String choiceDate(String date){
         this.date = date;
-
-        return date;
+        return this.date;
     }
+
+//    public void dateSearch () {
+//        List<String> list = new ArrayList<>();
+//        String search = list.stream().filter(date -> date.getDate.equals(this.date),date.getEmpty.equals(true))
+//                .forEach(f-> System.out.println(f.getRoom + f. getRoomNumber));
+//        String search = this.roomDataClass.hotelRoomHashMap.stream().fil
+//        for (int i = 1; i <= 4; i++) {
+//            String roomNumber = room + Integer.toString(i);
+//            String emptyCheck = String.valueOf(this.roomDataClass.hotelRoomHashMap.get(roomNumber));
+//            System.out.println(roomNumber + " / " + emptyCheck);
+//        }
+//    }
 
     public String choiceRoom(String num){
         switch (num) {

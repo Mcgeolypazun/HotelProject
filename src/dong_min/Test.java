@@ -2,6 +2,8 @@ package dong_min;
 
 import hotelroom.RoomDataClass;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,33 +15,20 @@ public class Test {
         reservationView.start();
 
 
-//        ArrayList<String, String, Double, Boolean> list = new ArrayList(
-//                new list { "2023-10-26", "싱글룸 201호", 3.0, false }
-//                new list { "2023-10-26", "싱글룸 202호", 3.0, false },
-//                new list { "2023-10-26", "싱글룸 203호", 3.0, false },
-//                new list { "2023-10-26", "싱글룸 204호", 3.0, false },
-//                new list { "2023-10-26", "더블룸 205호", 3.0, false },
-//                new list { "2023-10-26", "더블룸 206호", 3.0, false },
-//                new list { "2023-10-26", "더블룸 207호", 3.0, false },
-//                new list { "2023-10-26", "더블룸 208호", 3.0, false },
-//                new list { "2023-10-26", "트윈룸 301호", 3.0, false },
-//                new list { "2023-10-26", "트윈룸 302호", 3.0, false },
-//                new list { "2023-10-26", "트윈룸 303호", 3.0, false },
-//                new list { "2023-10-26", "트윈룸 304호", 3.0, false },
-//                new list { "2023-10-26", "스위트룸 401호", 3.0, false },
-//                new list { "2023-10-26", "스위트룸 402호", 3.0, false },
-//                new list { "2023-10-26", "스위트룸 403호", 3.0, false },
-//                new list { "2023-10-26", "스위트룸 404호", 3.0, false }
-//                );
-//
-//        list.stream.filter(list -> list.getDate);
-//        list.stream.filter(list -> list.getRoom);
-//        list.stream.filter(list -> list.getPrice);
-//        list.stream.filter(list -> list.getEmptyCheck);
 
 
 
+        // 특정 날짜와 시간을 나타내는 LocalDateTime 객체 생성
+        LocalDateTime dateTime = LocalDateTime.of(2023, 10, 27, 15, 30);
 
+        // LocalDateTime을 형식화하고 출력
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime = dateTime.format(formatter);
+        System.out.println("형식화된 날짜 및 시간: " + formattedDateTime);
+
+        // 산술 연산 수행
+        LocalDateTime futureDateTime = dateTime.plusHours(3);
+        System.out.println("미래의 날짜 및 시간: " + futureDateTime);
 
 
     }

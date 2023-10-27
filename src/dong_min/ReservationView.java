@@ -15,6 +15,7 @@ public class ReservationView {
         String date = sc.nextLine();
         reservation.choiceDate(date);
 
+
         System.out.println("------------------------");
         System.out.println("원하는 방의 타입을 선택해주세요.");
         System.out.println("( 1 ~ 4 중 입력해주세요.)");
