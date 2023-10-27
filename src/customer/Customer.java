@@ -1,4 +1,7 @@
 package customer;
+import interfaces.HotelRoom;
+import sunghyuk.ReservationRoomDate;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -7,6 +10,8 @@ public class Customer {
     private String phone;
     private int money;
     private UUID uuid;
+
+    private ReservationRoomDate customerRoomDate;
 
     public Customer(String name, String phone, int money, UUID uuid){
         this.name = name;
@@ -45,5 +50,13 @@ public class Customer {
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
+    }
+
+    public void setCustomerRoomDate(ReservationRoomDate reservationRoomDate){
+        this.customerRoomDate = reservationRoomDate;
+    }
+
+    public ReservationRoomDate getCustomerRoomDate() {
+        return customerRoomDate;
     }
 }
