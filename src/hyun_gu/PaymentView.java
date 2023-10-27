@@ -19,7 +19,7 @@ public class PaymentView {
             //MainView로 이동
             return true;
         }
-        else{//소지금 부회
+        else{//소지금 부족
 
             return false;
         }
