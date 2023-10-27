@@ -1,12 +1,13 @@
 package customer;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class CustomerBuilder {
     private String name;
     private String phone;
     private int money;
-    private LocalDateTime uuid;
+    private UUID uuid;
 
     public CustomerBuilder setName(String name){
         this.name = name;
@@ -20,7 +21,7 @@ public class CustomerBuilder {
         this.money = money;
         return this;
     }
-    public CustomerBuilder setUuid(LocalDateTime uuid){
+    public CustomerBuilder setUuid(UUID uuid){
         this.uuid = uuid;
         return this;
     }

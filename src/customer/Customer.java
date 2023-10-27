@@ -1,12 +1,14 @@
 package customer;
 import java.time.LocalDateTime;
+import java.util.UUID;
+
 public class Customer {
     private String name;
     private String phone;
     private int money;
-    private LocalDateTime uuid;
+    private UUID uuid;
 
-    Customer(String name,String phone,int money,LocalDateTime uuid){
+    public Customer(String name, String phone, int money, UUID uuid){
         this.name = name;
         this.phone = phone;
         this.money = money;
@@ -25,7 +27,7 @@ public class Customer {
         return phone;
     }
 
-    public LocalDateTime getUuid() {
+    public UUID getUuid() {
         return uuid;
     }
 
@@ -41,7 +43,7 @@ public class Customer {
         this.money = money;
     }
 
-    public void setUuid(LocalDateTime uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 }

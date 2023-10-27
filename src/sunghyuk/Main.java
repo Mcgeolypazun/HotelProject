@@ -1,9 +1,11 @@
 package sunghyuk;
 
+import customer.Customer;
 import hotelroom.RoomDataClass;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import java.util.UUID;
 
 import static hotelroom.RoomDataClass.hotelRoomHashMap;
 import static sunghyuk.ReservationRoomDateReady.arrRoomDate;
@@ -54,7 +56,9 @@ public class Main {
             System.out.println("종료 시간 : "+arrRoomDate.get(i).getEndTime());
         } //모든 예약 목록 조회(호텔측) - 고객 정보가 빠져있음
 
+        UUID randomUUID = UUID.randomUUID();
 
+        Customer cust = new Customer("일론머스크","01059595959",100000,randomUUID);
 
 //            Customer customer1 = new CustomerBuilder()
 //                    .setMoney(100000)
