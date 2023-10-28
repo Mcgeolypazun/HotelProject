@@ -18,7 +18,6 @@ public class Main {
 
             RoomDataClass roomDataClass = new RoomDataClass();
             MainView mainView = new MainView();
-            mainView.mainView();
 
 
 
