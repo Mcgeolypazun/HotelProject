@@ -1,10 +1,16 @@
 package tae_in_reservation;
 
+import customer.Customer;
+import sunghyuk.ReservationRoomDate;
+import sunghyuk.PersonReservation;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static hotelroom.RoomDataClass.hotelRoomHashMap;
 
 public class ReservationCheck { //고객이 자신의 정보 조회
+    static ArrayList<Customer> arrCustomerData = new ArrayList<>();
 
     String customerName;
     String phone;
@@ -26,14 +32,15 @@ public class ReservationCheck { //고객이 자신의 정보 조회
         uuid = cusUuid.next();
 
 
-//        public boolean isOccupation () {
-//
-//            return false;
-//        }
-//        public String reservationDate () {
-//
-//            return "";
-//        }
-    }
+            if (equals(Customer.)) {
+
+            }
+        }
+
+        public String reservationDate () {
+
+            return "";
+        }
+
 
 }

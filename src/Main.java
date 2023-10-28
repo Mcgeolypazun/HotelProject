@@ -15,19 +15,15 @@ public class Main {
     static Scanner kb = new Scanner(System.in);
     public static void main(String[] args) throws InterruptedException {
 
-//<<<<<<< HEAD
 
+            RoomDataClass roomDataClass = new RoomDataClass();
+            MainView mainView = new MainView();
         //점유되고 있는지 확인
         System.out.println("방 상태:"+hotelRoomHashMap.get("single1"));
-//=======
-//>>>>>>> b6b19f2d74b51b7a9a951c0e2f4a9f6e04904622
-
         RoomDataClass roomDataClass = new RoomDataClass();
         MainView mainView = new MainView();
         mainView.mainView();
 
-
-//<<<<<<< HEAD
         //점유되고 있는지 확인
         System.out.println("방 상태:" + hotelRoomHashMap.get("single1"));
 
@@ -65,8 +61,8 @@ public class Main {
 //                    .setPhone("010-4444-9999")
 //                    .setUuid(uuid.toString())
 //                    .build();
-//=======
-//>>>>>>> 683f6ea8af62b8348418ad1434130f34d060ed7e
+
+
 
 
     }
