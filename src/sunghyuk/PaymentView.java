@@ -1,13 +1,10 @@
-package hyun_gu;
+package sunghyuk;
 
-import interfaces.HotelRoom;
-import sunghyuk.Hotel;
-import java.util.UUID;
 public class PaymentView {
 
     Hotel hotel = new Hotel();
 
-    public PaymentView(){
+    PaymentView(){
 
     }
 
@@ -31,3 +28,4 @@ public class PaymentView {
     }
 
 }
+

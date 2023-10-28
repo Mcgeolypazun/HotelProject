@@ -32,9 +32,9 @@ public class ReservationCheck { //고객이 자신의 정보 조회
         uuid = cusUuid.next();
 
 
-            if (equals(Customer.)) {
-
-            }
+//            if (equals(Customer.)) {
+//
+//            }
         }
 
         public String reservationDate () {

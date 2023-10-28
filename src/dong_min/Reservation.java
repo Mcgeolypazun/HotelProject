@@ -5,35 +5,37 @@ import hotelroom.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import static sunghyuk.ReservationRoomDateReady.arrRoomDate;
+
 public class Reservation {
     String dateCheck;
-    String room;
+    public String room;
     boolean ended;
     RoomDataClass roomDataClass = new RoomDataClass();
-    LocalDateTime startTime ;
-    LocalDateTime endTime ;
+    public LocalDateTime startTime;
+    public LocalDateTime endTime;
 
-    public Reservation(){
+    public Reservation() {
     }
 
 
-
-    public LocalDateTime startTime(int year, int month, int day){
-        this.startTime = LocalDateTime.of(year,month,day,0,0);
+    public LocalDateTime startTime(int year, int month, int day) {
+        this.startTime = LocalDateTime.of(year, month, day, 0, 0);
         return startTime;
     }
-    public LocalDateTime endTime(int stay){
+
+    public LocalDateTime endTime(int stay) {
         this.endTime = this.startTime.plusDays(stay);
         return endTime;
     }
 
-    public String startTimeCheck () {
+    public String startTimeCheck() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String startTimeFormatter = startTime.format(formatter);
         return startTimeFormatter;
     }
 
-    public String endTimeCheck () {
+    public String endTimeCheck() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String endTimeFormatter = endTime.format(formatter);
         return endTimeFormatter;
@@ -51,7 +53,7 @@ public class Reservation {
 //        }
 //    }
 
-    public String choiceRoom(String num){
+    public String choiceRoom(String num) {
         switch (num) {
             case "1":
                 SingleRoom singleRoom = new SingleRoom();
@@ -82,23 +84,23 @@ public class Reservation {
         }
         return room;
     }
-    public void roomSearch (String room) {
-        while (!ended){
-            for (int i = 1; i <= 10; i++) {
-                String roomNumber = room + Integer.toString(i);
-                String emptyCheck = String.valueOf(this.roomDataClass.hotelRoomHashMap.get(roomNumber));
-                if (emptyCheck.equals("null")){
-                    ended = true;
-                } else {
-                    System.out.println(roomNumber + " / " + emptyCheck);
-                }
 
+    public void roomSearch(String room) {
+
+        for (int i = 0; i < arrRoomDate.size(); i++) {
+            String roomNumber = room + Integer.toString(i+1);
+            //String emptyCheck = String.valueOf(this.roomDataClass.hotelRoomHashMap.get(roomNumber));
+            String emptyCheck = arrRoomDate.get(i).getHotelRoom().getName();
+            if (emptyCheck.equals(roomNumber)) {
+                System.out.println(roomNumber + " / 체크인" + arrRoomDate.get(i).getStartTime());
+                System.out.println(roomNumber + " / 체크아웃" + arrRoomDate.get(i).getEndTime());
+                break;
+            }
+        }
+    }
+}
 //                hotelRoomHashMap의 value 값이 true,false 로 반환할수 있을때
 //                boolean bempty = this.roomDataClass.hotelRoomHashMap.get(roomNumber);
 //                String check = (empty) ? "〇" : "×";
 //                System.out.println(roomNumber + " / " + check);
 
-            }
-        }
-    }
-}

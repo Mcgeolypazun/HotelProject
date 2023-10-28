@@ -20,9 +20,9 @@ public class Main {
             MainView mainView = new MainView();
         //점유되고 있는지 확인
         System.out.println("방 상태:"+hotelRoomHashMap.get("single1"));
-        RoomDataClass roomDataClass = new RoomDataClass();
-        MainView mainView = new MainView();
-        mainView.mainView();
+//        RoomDataClass roomDataClass = new RoomDataClass();
+//        MainView mainView = new MainView();
+//        mainView.mainView();
 
         //점유되고 있는지 확인
         System.out.println("방 상태:" + hotelRoomHashMap.get("single1"));

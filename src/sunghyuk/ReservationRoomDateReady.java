@@ -11,7 +11,7 @@ public class ReservationRoomDateReady {
     private LocalDateTime reservationStart;
     private LocalDateTime reservationEnd;
     private HotelRoom hotelRoom;
-    static ArrayList<ReservationRoomDate> arrRoomDate = new ArrayList<>();
+    public static ArrayList<ReservationRoomDate> arrRoomDate = new ArrayList<>();
 
     public ReservationRoomDateReady(HotelRoom hotelRoom,LocalDateTime start, LocalDateTime end){
         this.reservationStart = start;
