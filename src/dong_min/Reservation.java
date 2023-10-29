@@ -5,6 +5,7 @@ import hotelroom.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import static sunghyuk.PaymentView.customers;
 import static sunghyuk.ReservationRoomDateReady.arrRoomDate;
 
 public class Reservation {
@@ -87,14 +88,16 @@ public class Reservation {
 
     public void roomSearch(String room) {
 
-        for (int i = 0; i < arrRoomDate.size(); i++) {
+        for (int i = 0; i < 4; i++) {
             String roomNumber = room + Integer.toString(i+1);
+            for (int j=0;j<customers.size();j++){
             //String emptyCheck = String.valueOf(this.roomDataClass.hotelRoomHashMap.get(roomNumber));
-            String emptyCheck = arrRoomDate.get(i).getHotelRoom().getName();
+            String emptyCheck = customers.get(j).getCustomerRoomDate().getHotelRoom().getName();
             if (emptyCheck.equals(roomNumber)) {
-                System.out.println(roomNumber + " / 체크인" + arrRoomDate.get(i).getStartTime());
-                System.out.println(roomNumber + " / 체크아웃" + arrRoomDate.get(i).getEndTime());
-                break;
+                System.out.println(roomNumber + " / 체크인" + arrRoomDate.get(j).getStartTime());
+                System.out.println(roomNumber + " / 체크아웃" + arrRoomDate.get(j).getEndTime());
+                System.out.println();
+            }
             }
         }
     }

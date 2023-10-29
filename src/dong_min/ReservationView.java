@@ -63,11 +63,8 @@ public class ReservationView {
         // 방 조회
         System.out.println("------------------------");
         System.out.println(roomType + " type 방의 현황");
-        //임시적으로 저장함 테스트용 밑3줄------
-        LocalDateTime startTime6 = LocalDateTime.of(2023,9,22,13,0);
-        LocalDateTime endTime6 = LocalDateTime.of(2023,9,25,16,0);
-        ReservationRoomDateReady reservationRoomDateReady = new ReservationRoomDateReady(hotelRoomHashMap.get("single1"),startTime6,endTime6);
-        //--------------
+
+
         reservation.roomSearch(roomType);
 
         //임시적으로 방생성 번호 대입 나중에 번호를 매겨 대입할것임
@@ -90,6 +87,9 @@ public class ReservationView {
 
     }
 
+    public ReservationView() throws InterruptedException {
+        start();
+    }
 
 
 }

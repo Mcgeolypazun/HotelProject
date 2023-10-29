@@ -1,6 +1,7 @@
 package tae_in_reservation;
 
 import dong_min.Reservation;
+import dong_min.ReservationView;
 
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class MainView {
         int mainAns = sc.nextInt(); // 예약하기 / 예약 조회 선택
 
         if (mainAns == 1) {
-            new Reservation();
+            new ReservationView();
         } else if (mainAns == 2) {
             new ReservationCheck();
         } else {
