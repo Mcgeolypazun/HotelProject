@@ -9,7 +9,8 @@ public class ReservationRoomDate {
     LocalDateTime startTime;
     LocalDateTime endTime;
 
-    ReservationRoomDate(HotelRoom hotelRoom,LocalDateTime startTime,LocalDateTime endTime){
+
+    public ReservationRoomDate(HotelRoom hotelRoom,LocalDateTime startTime,LocalDateTime endTime){
         this.hotelRoom = hotelRoom;
         this.startTime = startTime;
         this.endTime = endTime;

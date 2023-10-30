@@ -5,9 +5,9 @@ import sunghyuk.Hotel;
 import java.util.UUID;
 public class PaymentView {
 
-    Hotel hotel = new Hotel();
+    Hotel hotel = Hotel.getInstance();
 
-    PaymentView(){
+    public PaymentView(){
 
     }
 

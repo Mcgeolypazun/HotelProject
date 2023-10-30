@@ -1,8 +1,11 @@
 package tae_in_reservation;
 
 import dong_min.Reservation;
+import dong_min.ReservationView;
 
 import java.util.Scanner;
+
+import static sunghyuk.PaymentView.customers;
 
 
 public class MainView {
@@ -16,15 +19,20 @@ public class MainView {
                 "\t 세계적인 인테리어 디자인 그룹 HBA의 감각적인 디자인과 시그니엘의 품격이 어우러져 \n" +
                 "\t └─────────────────── 럭셔리의 새로운 가치를 전합니다. ──────────────────────┘");
         System.out.println(" ");
-        System.out.println("\t                       1. 예약하기 \t 2. 예약 조회");
+        System.out.println("                  1. 예약하기 \t 2. 예약 조회\t    3.호텔 모든 고객 조회");
 
         int mainAns = sc.nextInt(); // 예약하기 / 예약 조회 선택
 
         if (mainAns == 1) {
-            new Reservation();
+            new ReservationView();
         } else if (mainAns == 2) {
             new ReservationCheck();
-        } else {
+            countDown();
+        } else if(mainAns == 3){
+            new HotelReserveCheck();
+            countDown();
+        }
+        else {
             wrongInput();
         }
     }
@@ -48,5 +56,7 @@ public class MainView {
         Thread.sleep(1000);
         System.out.println("1.");
     }
+
+
 }
 
