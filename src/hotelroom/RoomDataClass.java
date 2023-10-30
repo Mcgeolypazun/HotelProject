@@ -27,10 +27,12 @@ public class RoomDataClass {
         SuiteRoom suite1 = new SuiteRoom();
         SuiteRoom suite2 = new SuiteRoom();
         SuiteRoom suite3 = new SuiteRoom();
+        SuiteRoom suite4 = new SuiteRoom();
 
         TwinRoom twin1 = new TwinRoom();
         TwinRoom twin2 = new TwinRoom();
         TwinRoom twin3 = new TwinRoom();
+        TwinRoom twin4 = new TwinRoom();
 
         single1.setName("single1");
         single2.setName("single2");
@@ -45,10 +47,12 @@ public class RoomDataClass {
         suite1.setName("suite1");
         suite2.setName("suite2");
         suite3.setName("suite3");
+        suite4.setName("suite4");
 
         twin1.setName("twin1");
         twin2.setName("twin2");
         twin3.setName("twin3");
+        twin4.setName("twin4");
 
         hotelRoomHashMap.put(single1.getName(),single1);
         hotelRoomHashMap.put(single2.getName(),single2);
@@ -63,10 +67,12 @@ public class RoomDataClass {
         hotelRoomHashMap.put(suite1.getName(),suite1);
         hotelRoomHashMap.put(suite2.getName(),suite2);
         hotelRoomHashMap.put(suite3.getName(),suite3);
+        hotelRoomHashMap.put(suite4.getName(),suite4);
 
         hotelRoomHashMap.put(twin1.getName(),twin1);
         hotelRoomHashMap.put(twin2.getName(),twin2);
         hotelRoomHashMap.put(twin3.getName(),twin3);
+        hotelRoomHashMap.put(twin4.getName(),twin4);
     }
 
 }

@@ -1,6 +1,8 @@
 package dong_min;
 
+import sung_jun.ReservationOkButton;
 import sunghyuk.PersonReservation;
+import sunghyuk.ReservationRoomDateReady;
 import tae_in_reservation.ReservationCheck;
 
 import java.time.DateTimeException;
@@ -8,9 +10,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
+import static hotelroom.RoomDataClass.hotelRoomHashMap;
+
 public class ReservationView {
-    public static void start () {
-        Reservation reservation = new Reservation();
+    static Reservation reservation;
+    public static void start () throws InterruptedException {
+        reservation = new Reservation();
         Scanner sc = new Scanner(System.in);
 
         // 예약날짜 정보
@@ -58,19 +63,33 @@ public class ReservationView {
         // 방 조회
         System.out.println("------------------------");
         System.out.println(roomType + " type 방의 현황");
+
+
         reservation.roomSearch(roomType);
+
+        //임시적으로 방생성 번호 대입 나중에 번호를 매겨 대입할것임
+        System.out.println("몇번방의 방을 예약하시겠습니까?");
+        int roomName = sc.nextInt();
+        reservation.room = roomType+Integer.toString(roomName);
 
         // 고객 정보
         System.out.println("------------------------");
         System.out.println("고객정보를 입력해주세요");
         System.out.print("이름 : ");
-        String personName = sc.nextLine();
+        String personName = sc.next();
         System.out.print("전화번호 : ");
-        String personphone = sc.nextLine();
+        String personphone = sc.next();
         System.out.print("소지금 : ");
-        int personMoney = Integer.parseInt(sc.nextLine());
+        int personMoney = sc.nextInt();
         PersonReservation personReservation = new PersonReservation(personphone,personName,personMoney);
 
+        new ReservationOkButton(reservation,personReservation);
 
     }
+
+    public ReservationView() throws InterruptedException {
+        start();
+    }
+
+
 }

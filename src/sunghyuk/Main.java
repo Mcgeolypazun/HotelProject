@@ -1,6 +1,7 @@
 package sunghyuk;
 
 import customer.Customer;
+import customer.CustomerBuilder;
 import hotelroom.RoomDataClass;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public class Main {
 
     static Scanner kb = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         RoomDataClass roomDataClass = new RoomDataClass();
         //점유되고 있는지 확인
         System.out.println("방 상태:" + hotelRoomHashMap.get("single1"));
@@ -60,12 +61,17 @@ public class Main {
 
         Customer cust = new Customer("일론머스크","01059595959",100000,randomUUID);
 
-//            Customer customer1 = new CustomerBuilder()
-//                    .setMoney(100000)
-//                    .setName("김철수")
-//                    .setPhone("010-4444-9999")
-//                    .setUuid(uuid.toString())
-//                    .build();
+            Customer customer1 = new CustomerBuilder()
+                    .setMoney(100000)
+                    .setName("김철수")
+                    .setPhone("010-4444-9999")
+                    .setUuid(randomUUID)
+                    .build();
+
+
+        System.out.println("방이름 : "+arrRoomDate.get(1).getHotelRoom().getName());
+        System.out.println("예약 시작시간 : "+arrRoomDate.get(1).getStartTime());
+        System.out.println("예약 종료시간 : "+arrRoomDate.get(1).getEndTime());
 
     }
 }
