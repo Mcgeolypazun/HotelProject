@@ -69,6 +69,7 @@ public class ReservationView {
 
         //임시적으로 방생성 번호 대입 나중에 번호를 매겨 대입할것임
         System.out.println("몇번방의 방을 예약하시겠습니까?");
+        System.out.println("(1 ~ 4 중 입력해주세요.)");
         int roomName = sc.nextInt();
         reservation.room = roomType+Integer.toString(roomName);
 
